@@ -1,7 +1,7 @@
 # ion-spaced-menu
 Fork of mAmged's ionic-ion-airbnbmenu repo with changes. Inspired by SpacedOut.
 
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/TheDarkCode/ion-spaced-menu/LICENSE.md)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/TheDarkCode/ion-spaced-menu/blob/master/LICENSE)
 
 ###Usage:
 
