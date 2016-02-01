@@ -43,6 +43,8 @@
 
     /* Adjust if you use different height for menu. */
     margin-top:5%;
+    /* Fix centering. */
+    margin-top: calc(5vh);
     margin-bottom:5%;
     
     /* 0px 0px is for 360-degree box shadow. Default 100px spread. */
