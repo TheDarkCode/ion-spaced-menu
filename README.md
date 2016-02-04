@@ -11,6 +11,8 @@ In your main app module, you need to add "ion-spaced-menu" to your app's depende
 
 Modify CSS as necessary to your liking. Currently set to left: 40px, with 90% height, and 5% top/bottom margins.
 
+It is recommended that you use drag-content="false" on ion-side-menus and ion-side-menu-content. Otherwise you can crash your app from trying to swipe too much on some platforms (not in browsers).
+
 Menu-right will work like a normal right side menu and get tagged as inactive (modify with css to liking if you want to show it on wide-format displays).
 
 ####ionic-ion-airbnbmenu repo:
