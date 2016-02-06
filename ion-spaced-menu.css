@@ -17,9 +17,16 @@
 }
 
 /* Left Menu */
-.menu.menu-left{
-    transition: all 300ms ease-in-out;
-    display:none;
+.menu.menu-left {
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    display:inherit;
+    left: -1000px;
+    transform: scale(0);
     /* Adjust if you use different margins on menu-left. */
     min-height:90%;
     max-height:90%;
@@ -29,49 +36,92 @@
     transform: scale(.2);
 }
 /* When Left Menu Open */
-.menu.menu-left.active{
+.menu.menu-left.active {
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    -webkit-backface-visibility: hidden;
     display:inherit;
+    transform: scale(1);
     /* 
        Adjust how far from top the menu appears.
        For small menus, you might want to think about adjusting this.
     */
     top: 0px;
-    left: 40px;
+    left: 30px;
 
-    /* Override z-index */
     z-index: 999 !important;
 
     /* Adjust if you use different height for menu. */
     margin-top:5%;
-    /* Fix centering. */
-    margin-top: calc(5vh);
+    margin-top:calc(5vh);
     margin-bottom:5%;
     
     /* 0px 0px is for 360-degree box shadow. Default 100px spread. */
-    box-shadow: 0px 0px 100px rgba(255,255,255,0.4);
+    box-shadow: 0px 0px 100px rgba(0,0,0,0.2);
+
+    border-radius: 10px;
 }
-.menu.menu-left.active .list{
+
+@media screen and (min-width:420px) {
+    .menu.menu-left {
+        min-width:380px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .menu.menu-left {
+        min-width:500px;
+    }
+}
+
+
+.menu-screen, .menu-screen.pane {
+    background: transparent;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.menu-left.active {
+    background: rgba(255,255,255,0.8);
+}
+
+.menu.menu-left.active .list {
     transform: scale(1);
 }
 
+.menu.menu-left.active .list :hover {
+    transform: scale(1.03);
+}
+
 /* Scroll Override for Windows */
-.menu-screen.scroll-content.overflow-scroll{
+.menu-screen.scroll-content.overflow-scroll {
     transition: all 250ms ease-in-out;
-    -ms-overflow-style: scrollbar !important;
+    -ms-overflow-style: none !important;
+}
+
+.menu-screen.scroll-content.overflow-scroll::-webkit-scrollbar {
+    width: 0 !important;
 }
 
 /* Right Menu */
-.menu.menu-right{
+.menu-right {
+    /* 0px 0px is for 360-degree box shadow. Default 100px spread. */
+    background: rgba(255,255,255,0.5);
+}
+.menu.menu-right {
     transition: all 300ms ease-in-out;
 }
 .menu.menu-right .list {
     transition: all 300ms ease-in-out;
 }
 /* When Right Menu Open */
-.menu.menu-right.active{
+.menu.menu-right.active {
     display:inherit;
 }
-.menu.menu-right.active .list{
+.menu.menu-right.active .list {
     transform: scale(1);
 }
 
@@ -87,7 +137,8 @@
 
 /* Side Menu Background */
 .pane.view {
-    background: #cccccc url("/your_image_here/") no-repeat center;
+    background: #cccccc;
+    background: url(YOUR_IMAGE) no-repeat center;
     background-size: cover;
     backdrop-filter: blur(10px);
 }
@@ -95,5 +146,5 @@
 /* Add shadow around main view container for when menu-left is active. */
 .view-container .pane {
     /* 0px 0px is for 360-degree box shadow. Default 100px spread. */
-    box-shadow: 0px 0px 100px rgba(255,255,255,0.4);
+    box-shadow: 0px 0px 100px rgba(0,0,0,0.2);
 }
