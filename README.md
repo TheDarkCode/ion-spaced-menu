@@ -7,6 +7,8 @@ Fork of mAmged's ionic-ion-airbnbmenu repo with changes. Inspired by SpacedOut.
 
 ###Usage:
 
+Requires Ionic Framework 1.x. Has been tested and works with the latest nightly builds (confirmed up to 1.2.1). As in the demo, you need to use both a right and left side menu.
+
 Include the ion-spaced-menu.css file in the header after all other ionic css files. Include ion-spaced-menu in footer with other javascript being loaded.
 
 In your main app module, you need to add "ion-spaced-menu" to your app's dependencies.
